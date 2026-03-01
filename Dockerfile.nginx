@@ -2,7 +2,18 @@ ARG NGINX_VERSION=1.28
 ARG ALPINE_VERSION=3.23
 FROM dhi.io/nginx:${NGINX_VERSION}-alpine${ALPINE_VERSION}-dev
 
+ARG NGINX_VERSION
+ARG ALPINE_VERSION
 ARG PG_VERSION=18
+
+LABEL org.opencontainers.image.title="PostgreSQL Client (Nginx)"
+LABEL org.opencontainers.image.description="Docker image combining Nginx with PostgreSQL client (psql, pg_dump) based on Alpine Linux"
+LABEL org.opencontainers.image.version="${PG_VERSION}-nginx"
+LABEL org.opencontainers.image.licenses="MIT"
+LABEL postgresql.version="${PG_VERSION}"
+LABEL nginx.version="${NGINX_VERSION}"
+LABEL alpine.version="${ALPINE_VERSION}"
+
 RUN apk add --no-cache postgresql${PG_VERSION}-client
 
 CMD [ "nginx", "-g", "daemon off;" ]

@@ -1,7 +1,16 @@
 ARG ALPINE_VERSION=3.23
 FROM dhi.io/alpine-base:${ALPINE_VERSION}-dev
 
+ARG ALPINE_VERSION
 ARG PG_VERSION=18
+
+LABEL org.opencontainers.image.title="PostgreSQL Client"
+LABEL org.opencontainers.image.description="Lightweight Docker image with PostgreSQL client (psql, pg_dump) based on Alpine Linux"
+LABEL org.opencontainers.image.version="${PG_VERSION}"
+LABEL org.opencontainers.image.licenses="MIT"
+LABEL postgresql.version="${PG_VERSION}"
+LABEL alpine.version="${ALPINE_VERSION}"
+
 RUN apk add --no-cache postgresql${PG_VERSION}-client
 
 CMD [ "/bin/ash" ]

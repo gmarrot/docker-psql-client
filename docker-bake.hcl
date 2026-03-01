@@ -13,7 +13,7 @@ group "nginx" {
 target "_common" {
     dockerfile = "Dockerfile"
     platforms  = ["linux/amd64", "linux/arm64"]
-    attest     = [
+    attest = [
         {
             type = "provenance"
             mode = "max"
@@ -22,6 +22,13 @@ target "_common" {
             type = "sbom"
         }
     ]
+    labels = {
+        "org.opencontainers.image.source"        = "https://github.com/gmarrot/docker-psql-client"
+        "org.opencontainers.image.documentation" = "https://github.com/gmarrot/docker-psql-client#readme"
+        "org.opencontainers.image.url"           = "https://github.com/gmarrot/docker-psql-client"
+        "org.opencontainers.image.licenses"      = "MIT"
+        "org.opencontainers.image.vendor"        = "gmarrot"
+    }
 }
 
 target "client-15" {
