@@ -1,0 +1,8 @@
+ARG NGINX_VERSION=1.28
+ARG ALPINE_VERSION=3.23
+FROM dhi.io/nginx:${NGINX_VERSION}-alpine${ALPINE_VERSION}-dev
+
+ARG PG_VERSION=18
+RUN apk add --no-cache postgresql${PG_VERSION}-client
+
+CMD [ "nginx", "-g", "daemon off;" ]

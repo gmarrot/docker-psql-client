@@ -1,0 +1,7 @@
+ARG ALPINE_VERSION=3.23
+FROM dhi.io/alpine-base:${ALPINE_VERSION}-dev
+
+ARG PG_VERSION=18
+RUN apk add --no-cache postgresql${PG_VERSION}-client
+
+CMD [ "/bin/ash" ]
