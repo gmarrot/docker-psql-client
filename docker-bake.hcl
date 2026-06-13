@@ -64,7 +64,7 @@ target "nginx-15" {
     tags       = ["gmarrot/postgresql-client:15-nginx"]
     args = {
         PG_VERSION     = "15"
-        NGINX_VERSION  = "1.28"
+        NGINX_VERSION  = "1.30"
         ALPINE_VERSION = "3.22"
     }
 }
@@ -77,7 +77,7 @@ target "nginx-main" {
     tags       = ["gmarrot/postgresql-client:${version}-nginx"]
     args = {
         PG_VERSION     = version
-        NGINX_VERSION  = "1.28"
+        NGINX_VERSION  = "1.30"
         ALPINE_VERSION = "3.23"
     }
     matrix = {
