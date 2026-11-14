@@ -50,7 +50,7 @@ target "client-main" {
     tags       = ["gmarrot/postgresql-client:${version}"]
     args = {
         PG_VERSION     = version
-        ALPINE_VERSION = "3.23"
+        ALPINE_VERSION = "3.24"
     }
     matrix = {
         version = ["16", "17", "18"]
@@ -78,7 +78,7 @@ target "nginx-main" {
     args = {
         PG_VERSION     = version
         NGINX_VERSION  = "1.30"
-        ALPINE_VERSION = "3.23"
+        ALPINE_VERSION = "3.24"
     }
     matrix = {
         version = ["16", "17", "18"]

@@ -8,23 +8,23 @@ Lightweight Docker images containing the PostgreSQL client (`psql`), based on Al
 
 Minimal image with only the PostgreSQL client for running `psql`, `pg_dump`, etc.
 
-| Tag | PostgreSQL | Alpine | Description |
-|-----|------------|--------|-------------|
-| `15` | 15 | 3.22 | PostgreSQL 15 |
-| `16` | 16 | 3.23 | PostgreSQL 16 |
-| `17` | 17 | 3.23 | PostgreSQL 17 |
-| `18` | 18 | 3.23 | PostgreSQL 18 |
+| Tag  | PostgreSQL | Alpine | Description   |
+|------|------------|--------|---------------|
+| `15` | 15         | 3.22   | PostgreSQL 15 |
+| `16` | 16         | 3.24   | PostgreSQL 16 |
+| `17` | 17         | 3.24   | PostgreSQL 17 |
+| `18` | 18         | 3.24   | PostgreSQL 18 |
 
 ### Nginx Image (PostgreSQL client + Nginx)
 
 Image combining Nginx with the PostgreSQL client, suitable for scenarios where both Nginx and PostgreSQL tools are needed in the same container (reverse proxy, API gateways, etc.).
 
-| Tag | PostgreSQL | Nginx | Alpine |
-|-----|------------|-------|--------|
-| `15-nginx` | 15 | 1.28 | 3.22 |
-| `16-nginx` | 16 | 1.28 | 3.23 |
-| `17-nginx` | 17 | 1.28 | 3.23 |
-| `18-nginx` | 18 | 1.28 | 3.23 |
+| Tag        | PostgreSQL | Nginx | Alpine |
+|------------|------------|-------|--------|
+| `15-nginx` | 15         | 1.30  | 3.22   |
+| `16-nginx` | 16         | 1.30  | 3.24   |
+| `17-nginx` | 17         | 1.30  | 3.24   |
+| `18-nginx` | 18         | 1.30  | 3.24   |
 
 ## Supported Platforms
 
